@@ -1,0 +1,109 @@
+@import "tailwindcss";
+
+@theme {
+	--color-void: #0b0b14;
+	--color-panel: #15151f;
+	--color-panel-2: #1c1c2a;
+	--color-ink: #edebf5;
+	--color-muted: #8b8aa3;
+	--color-amber: #ffb454;
+	--color-dusk: #7c5cff;
+	--color-cyan: #22d3ee;
+	--font-display: "Bricolage Grotesque", "Inter", system-ui, sans-serif;
+	--font-jp: "Noto Serif JP", serif;
+
+	--animate-marquee: marquee 40s linear infinite;
+	--animate-shimmer: shimmer 3s ease-in-out infinite;
+	--animate-gradient: gradient 6s ease infinite;
+	--animate-aurora-a: aurora-a 18s ease-in-out infinite;
+	--animate-aurora-b: aurora-b 24s ease-in-out infinite;
+
+	@keyframes marquee {
+		to {
+			transform: translateX(-50%);
+		}
+	}
+	@keyframes shimmer {
+		0% {
+			transform: translateX(-120%);
+		}
+		60%,
+		100% {
+			transform: translateX(120%);
+		}
+	}
+	@keyframes gradient {
+		0%,
+		100% {
+			background-position: 0% 50%;
+		}
+		50% {
+			background-position: 100% 50%;
+		}
+	}
+	@keyframes aurora-a {
+		0%,
+		100% {
+			transform: translate(0, 0) scale(1);
+		}
+		50% {
+			transform: translate(-6rem, 4rem) scale(1.25);
+		}
+	}
+	@keyframes aurora-b {
+		0%,
+		100% {
+			transform: translate(0, 0) scale(1.1);
+		}
+		50% {
+			transform: translate(5rem, -3rem) scale(0.9);
+		}
+	}
+}
+
+html {
+	scroll-behavior: smooth;
+	scroll-padding-top: 5rem;
+}
+
+html,
+body {
+	overflow-x: clip;
+	background-color: var(--color-void);
+	color: var(--color-ink);
+	color-scheme: dark;
+	font-family: "Inter", system-ui, -apple-system, sans-serif;
+	margin: 0;
+	min-height: 100vh;
+}
+
+body {
+	background-image:
+		radial-gradient(
+			60rem 30rem at 85% -5%,
+			rgb(124 92 255 / 0.16),
+			transparent 60%
+		),
+		radial-gradient(
+			40rem 25rem at -5% 20%,
+			rgb(34 211 238 / 0.07),
+			transparent 60%
+		);
+	background-repeat: no-repeat;
+}
+
+::selection {
+	background: rgb(124 92 255 / 0.45);
+}
+
+@media (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	[class*="animate-"] {
+		animation: none !important;
+	}
+}
