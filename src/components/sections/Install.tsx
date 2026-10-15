@@ -81,29 +81,35 @@ export function Install({ info }: { info: BrowserInfo }) {
 
 			<Reveal delay={0.1}>
 				<AnimatePresence mode="wait" initial={false}>
-					<motion.div
-						key={`${info.id}-${info.os}`}
-						initial={{ opacity: 0, y: 8 }}
-						animate={{ opacity: 1, y: 0 }}
-						exit={{ opacity: 0 }}
-						className={`mt-6 flex items-start gap-3 rounded-xl border p-4 text-[14px] leading-relaxed ${
-							info.warn
-								? "border-amber/30 bg-amber/[0.07] text-ink"
-								: "border-cyan/25 bg-cyan/6 text-ink"
-						}`}
-					>
-						<span
-							className={`mt-0.5 shrink-0 ${info.warn ? "text-amber" : "text-cyan"}`}
+					{info.detected && (
+						<motion.div
+							key={`${info.id}-${info.os}`}
+							initial={{ opacity: 0, y: 8 }}
+							animate={{ opacity: 1, y: 0 }}
+							exit={{ opacity: 0 }}
+							className={`mt-6 flex items-start gap-3 rounded-xl border p-4 text-[14px] leading-relaxed ${
+								info.warn
+									? "border-amber/30 bg-amber/[0.07] text-ink"
+									: "border-cyan/25 bg-cyan/6 text-ink"
+							}`}
 						>
-							{info.warn ? <AlertTriangle size={18} /> : <Sparkles size={18} />}
-						</span>
-						<p>
-							<span className="font-semibold">
-								You're using {info.name} on {info.osName}.
-							</span>{" "}
-							<span className="text-muted">{info.recommendation}</span>
-						</p>
-					</motion.div>
+							<span
+								className={`mt-0.5 shrink-0 ${info.warn ? "text-amber" : "text-cyan"}`}
+							>
+								{info.warn ? (
+									<AlertTriangle size={18} />
+								) : (
+									<Sparkles size={18} />
+								)}
+							</span>
+							<p>
+								<span className="font-semibold">
+									You're using {info.name} on {info.osName}.
+								</span>{" "}
+								<span className="text-muted">{info.recommendation}</span>
+							</p>
+						</motion.div>
+					)}
 				</AnimatePresence>
 			</Reveal>
 
