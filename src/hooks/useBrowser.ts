@@ -1,12 +1,22 @@
 import { useEffect, useState } from "react";
-import { type BrowserInfo, detectBrowser, resolve } from "../lib/detect";
+import {
+	type BrowserInfo,
+	DEFAULT_INFO,
+	detectBrowser,
+	resolve,
+} from "../lib/detect";
 
 interface BraveNavigator extends Navigator {
 	brave?: { isBrave: () => Promise<boolean> };
 }
 
 export function useBrowser(): BrowserInfo {
-	const [info, setInfo] = useState<BrowserInfo>(detectBrowser);
+	const [info, setInfo] = useState<BrowserInfo>(DEFAULT_INFO);
+
+	// Detect after mount so server HTML and the first client render are identical.
+	useEffect(() => {
+		setInfo(detectBrowser());
+	}, []);
 
 	useEffect(() => {
 		const brave = (navigator as BraveNavigator).brave;
