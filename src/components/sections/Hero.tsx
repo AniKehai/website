@@ -165,22 +165,26 @@ export function Hero({ info }: { info: BrowserInfo }) {
 						transition={{ delay: 1.05 }}
 						className="mt-4 flex flex-col gap-2 text-xs text-muted"
 					>
-						<AnimatePresence mode="wait" initial={false}>
-							<motion.span
-								key={`${info.id}-${info.os}`}
-								initial={{ opacity: 0, y: 6 }}
-								animate={{ opacity: 1, y: 0 }}
-								exit={{ opacity: 0, y: -6 }}
-								className={`inline-flex w-fit items-center gap-1.5 rounded-full border px-2.5 py-1 font-medium ${
-									info.warn
-										? "border-amber/30 bg-amber/10 text-amber"
-										: "border-cyan/25 bg-cyan/10 text-cyan"
-								}`}
-							>
-								<Check size={12} strokeWidth={3} />
-								Detected {info.name} on {info.osName}
-							</motion.span>
-						</AnimatePresence>
+						<div className="min-h-6.5">
+							<AnimatePresence mode="wait" initial={false}>
+								{info.detected && (
+									<motion.span
+										key={`${info.id}-${info.os}`}
+										initial={{ opacity: 0, y: 6 }}
+										animate={{ opacity: 1, y: 0 }}
+										exit={{ opacity: 0, y: -6 }}
+										className={`inline-flex w-fit items-center gap-1.5 rounded-full border px-2.5 py-1 font-medium ${
+											info.warn
+												? "border-amber/30 bg-amber/10 text-amber"
+												: "border-cyan/25 bg-cyan/10 text-cyan"
+										}`}
+									>
+										<Check size={12} strokeWidth={3} />
+										Detected {info.name} on {info.osName}
+									</motion.span>
+								)}
+							</AnimatePresence>
+						</div>
 						<span>
 							{info.ctaNote} · v{VERSION} · {SITES.length} sites supported
 						</span>
