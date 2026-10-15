@@ -120,8 +120,8 @@ export function PresenceCard() {
 						</div>
 					</div>
 
-					<div className="rounded-xl bg-[#2b2d31]/50 p-4">
-						<p className="mb-2 text-[11px] font-bold uppercase tracking-wider text-[#f2f3f5]">
+					<div className="rounded-xl bg-[#2b2d31]/50 p-2">
+						<p className="mb-1.5 text-[10px] font-light uppercase tracking-wider text-[#f2f3f5]">
 							Watching Anime
 						</p>
 
@@ -160,15 +160,15 @@ export function PresenceCard() {
 								</div>
 
 								<div className="flex min-w-0 flex-1 flex-col justify-center">
-									<p className="truncate text-[14px] font-bold text-[#f2f3f5]">
+									<p className="truncate text-[13px] font-bold text-[#f2f3f5]">
 										{show.title}
 									</p>
-									<p className="mt-0.5 truncate text-[13px] text-[#b5bac1]">
+									<p className="mt-0.5 truncate text-[11px] text-[#b5bac1]">
 										{show.episode}
 									</p>
 
 									{paused ? (
-										<div className="mt-2.5 flex items-center gap-1.5 text-[11px] font-medium tabular-nums text-[#23a559]">
+										<div className="mt-1 flex items-center gap-1.5 text-[11px] font-medium tabular-nums text-[#23a559]">
 											<MonitorPlay
 												size={13}
 												strokeWidth={2.5}
@@ -177,9 +177,9 @@ export function PresenceCard() {
 											<span>{fmt(t)}</span>
 										</div>
 									) : (
-										<div className="mt-2.5 flex items-center gap-2 text-[11px] font-medium tabular-nums text-[#b5bac1]">
+										<div className="mt-1 flex items-center gap-2 text-[11px] font-medium tabular-nums text-[#b5bac1]">
 											<span>{fmt(t)}</span>
-											<div className="h-1 flex-1 overflow-hidden rounded-full bg-white/15">
+											<div className="h-0.5 flex-1 overflow-hidden rounded-full bg-white/15">
 												<div
 													className="h-full rounded-full bg-[#f2f3f5] transition-[width] duration-1000 ease-linear"
 													style={{ width: `${(t / show.total) * 100}%` }}
