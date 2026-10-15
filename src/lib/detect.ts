@@ -21,6 +21,8 @@ export type OsId =
 	| "unknown";
 
 export interface BrowserInfo {
+	/** false for the server-rendered default, true once the real browser is known. */
+	detected: boolean;
 	id: BrowserId;
 	name: string;
 	os: OsId;
@@ -87,7 +89,13 @@ function detectBrowserId(ua: string): BrowserId {
 }
 
 export function resolve(id: BrowserId, os: OsId): BrowserInfo {
-	const base = { id, name: NAMES[id], os, osName: OS_NAMES[os] };
+	const base = {
+		detected: true,
+		id,
+		name: NAMES[id],
+		os,
+		osName: OS_NAMES[os],
+	};
 
 	if (id === "firefox" && os !== "ios") {
 		return {
@@ -147,3 +155,17 @@ export function detectBrowser(): BrowserInfo {
 	const ua = navigator.userAgent;
 	return resolve(detectBrowserId(ua), detectOs(ua));
 }
+
+/**
+ * What the server (and the very first client render) shows: neutral copy with no
+ * browser-specific claims, so pre-rendered HTML and hydration always match.
+ */
+export const DEFAULT_INFO: BrowserInfo = {
+	...resolve("other", "unknown"),
+	detected: false,
+	warn: false,
+	ctaLabel: "Install AniKehai",
+	ctaHref: "#install",
+	ctaNote: "Free · Firefox, Chrome & Android",
+	recommendation: "",
+};
