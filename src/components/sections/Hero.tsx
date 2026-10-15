@@ -41,7 +41,11 @@ export function Hero({ info }: { info: BrowserInfo }) {
 	const external = info.ctaHref.startsWith("http");
 
 	return (
-		<header id="top" ref={ref} className="relative overflow-hidden">
+		<header
+			id="top"
+			ref={ref}
+			className="relative flex min-h-[calc(100svh-3.5rem)] flex-col overflow-hidden"
+		>
 			<div
 				aria-hidden="true"
 				className="pointer-events-none absolute -left-20 top-10 h-72 w-72 animate-aurora-a rounded-full bg-dusk/20 blur-3xl"
@@ -63,7 +67,7 @@ export function Hero({ info }: { info: BrowserInfo }) {
 				気配
 			</motion.span>
 
-			<div className="relative mx-auto grid max-w-6xl items-center gap-14 px-5 pb-24 pt-16 lg:grid-cols-[1.15fr_1fr] lg:pt-24">
+			<div className="relative mx-auto grid w-full max-w-6xl flex-1 items-center gap-14 px-5 py-12 lg:grid-cols-[1.15fr_1fr] lg:py-16">
 				<div>
 					<motion.p
 						initial={{ opacity: 0, x: -12 }}
