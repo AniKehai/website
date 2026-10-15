@@ -1,4 +1,14 @@
 User-agent: *
 Allow: /
 
+# AI / answer-engine crawlers are welcome
+User-agent: GPTBot
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+
 Sitemap: https://anikehai.vercel.app/sitemap.xml
