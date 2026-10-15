@@ -1,0 +1,13 @@
+# AniKehai
+
+> AniKehai is a free, open-source, standalone browser extension that shows the anime you are watching as a Discord Rich Presence (title, episode, cover art, live progress bar). It works on Firefox (desktop and Android), Chromium browsers (Chrome, Edge, Brave, Opera, Vivaldi) and Android browsers with extension support such as Kiwi. No desktop app or background middleware is required.
+
+## Links
+- [Website](https://anikehai.vercel.app/): install guides for every browser, supported sites, FAQ
+- [Firefox Add-ons](https://addons.mozilla.org/en-US/firefox/addon/anikehai/): one-click install for Firefox
+- [GitHub releases](https://github.com/minkxx/AniKehai/releases): Chrome / Chromium / Android ZIP downloads
+- [Source code](https://github.com/minkxx/AniKehai)
+- [Support Discord server](https://discord.gg/w9Q7YUrzpn)
+
+## Supported sites
+Anikoto, Aniwave, AnimePahe, HiAnime, Aniwatch, ReAnime, Miruro, KissAssAnime
