@@ -50,7 +50,13 @@ export const SITES: SiteMeta[] = [
 	},
 	{
 		name: "Miruro",
-		domains: ["www.miruro.tv", "www.miruro.to", "www.miruro.cx"],
+		domains: [
+			"www.miruro.tv",
+			"www.miruro.to",
+			"www.miruro.cx",
+			"www.miruro.bz",
+			"barelystarted.miruro.tv",
+		],
 		favicon: "https://www.google.com/s2/favicons?sz=64&domain=miruro.tv",
 	},
 	{
