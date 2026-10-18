@@ -1,4 +1,4 @@
-export const VERSION = "2.6.0";
+export const VERSION = "2.6.1";
 
 export const LINKS = {
 	firefox: "https://addons.mozilla.org/en-US/firefox/addon/anikehai/",

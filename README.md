@@ -5,7 +5,7 @@
 
   <p align="center">
     <img src="https://img.shields.io/github/stars/minkxx/AniKehai?style=flat" alt="GitHub Stars">
-    <img src="https://img.shields.io/badge/version-2.6.0-blue?style=flat&labelColor=808080" alt="Version">
+    <img src="https://img.shields.io/badge/version-2.6.1-blue?style=flat&labelColor=808080" alt="Version">
     <img src="https://img.shields.io/badge/license-MIT-green?style=flat" alt="License">
   </p>
 </div>
