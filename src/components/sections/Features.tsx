@@ -1,4 +1,11 @@
-import { Activity, Image, Shield, Smartphone, Zap } from "lucide-react";
+import {
+	Activity,
+	HatGlasses,
+	Image,
+	Shield,
+	Smartphone,
+	Zap,
+} from "lucide-react";
 import { motion } from "motion/react";
 import type { ReactNode } from "react";
 import { Reveal } from "../ui/Reveal";
@@ -25,8 +32,13 @@ const items: { icon: ReactNode; title: string; body: string }[] = [
 		body: "Runs on Android browsers with extension support, with a custom mobile sign-in flow.",
 	},
 	{
-		icon: <Shield size={18} />,
+		icon: <HatGlasses size={18} />,
 		title: "Privacy toggle",
+		body: "Hides which anime you watch. Discord only shows 'Anime — Private Session'.",
+	},
+	{
+		icon: <Shield size={18} />,
+		title: "Broadcast toggle",
 		body: "Switch broadcasting off from the popup without ever logging out of Discord.",
 	},
 ];
