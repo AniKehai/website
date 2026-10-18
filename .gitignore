@@ -24,5 +24,6 @@ dist-ssr
 *.sw?
 
 # snapshots
-snapshot.ps1
 project-snapshot.md 
+snapshot.ps1
+snapshot.sh
