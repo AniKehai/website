@@ -1,8 +1,8 @@
-export const VERSION = "2.6.1";
+export const VERSION = "2.6.5";
 
 export const LINKS = {
 	firefox: "https://addons.mozilla.org/en-US/firefox/addon/anikehai/",
-	releases: "https://github.com/minkxx/AniKehai/releases",
+	releases: "https://github.com/minkxx/AniKehai/releases/tag/v2.6.5",
 	github: "https://github.com/minkxx/AniKehai",
 	issues: "https://github.com/minkxx/AniKehai/issues",
 	contributing:
@@ -63,6 +63,11 @@ export const SITES: SiteMeta[] = [
 		name: "KissAssAnime",
 		domains: ["kaa.lt"],
 		favicon: "https://www.google.com/s2/favicons?sz=64&domain=kaa.lt",
+	},
+	{
+		name: "AnimeX",
+		domains: ["www.myanimex.com", "myanimex.com"],
+		favicon: "https://www.google.com/s2/favicons?sz=64&domain=myanimex.com",
 	},
 ];
 
