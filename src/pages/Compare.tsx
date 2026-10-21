@@ -44,8 +44,9 @@ export function Compare() {
 					</table>
 				</div>
 				<p className="text-[13px]">
-					The right-hand column describes similar tools such as PreMiD; check their own documentation for current
-					details. AniKehai is not affiliated with PreMiD.
+					The right-hand column describes similar tools such as PreMiD; check
+					their own documentation for current details. AniKehai is not
+					affiliated with PreMiD.
 				</p>
 			</Section>
 			<Section title="Choose AniKehai if">
