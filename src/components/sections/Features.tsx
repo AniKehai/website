@@ -6,9 +6,7 @@ import {
 	Smartphone,
 	Zap,
 } from "lucide-react";
-import { motion } from "motion/react";
 import type { ReactNode } from "react";
-import { Reveal } from "../ui/Reveal";
 
 const items: { icon: ReactNode; title: string; body: string }[] = [
 	{
@@ -45,30 +43,31 @@ const items: { icon: ReactNode; title: string; body: string }[] = [
 
 export function Features() {
 	return (
-		<section className="mx-auto max-w-6xl px-5 pb-20">
-			<Reveal>
-				<h2 className="font-display text-3xl font-extrabold tracking-tight">
-					Small. Fast. Yours.
+		<section id="features" className="mx-auto max-w-6xl px-5 pb-20">
+			<div>
+				<p className="text-xs font-semibold tracking-[0.22em] text-cyan">
+					FEATURES
+				</p>
+				<h2 className="mt-3 font-display text-3xl font-extrabold tracking-tight">
+					What the AniKehai Discord extension does
 				</h2>
-			</Reveal>
+			</div>
 			<div className="mt-8 grid gap-x-10 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">
-				{items.map((f, i) => (
-					<Reveal key={f.title} delay={i * 0.08}>
-						<motion.div whileHover={{ x: 4 }} className="group flex gap-4">
-							<motion.span
-								whileHover={{ rotate: -8, scale: 1.12 }}
-								className="mt-0.5 grid h-9 w-9 shrink-0 place-items-center rounded-lg border border-white/10 text-cyan transition-colors group-hover:border-cyan/50 group-hover:bg-cyan/10"
-							>
-								{f.icon}
-							</motion.span>
-							<div>
-								<h3 className="text-[15px] font-semibold">{f.title}</h3>
-								<p className="mt-1 text-[13.5px] leading-relaxed text-muted">
-									{f.body}
-								</p>
-							</div>
-						</motion.div>
-					</Reveal>
+				{items.map((f) => (
+					<div
+						key={f.title}
+						className="group flex gap-4 transition-transform hover:translate-x-1"
+					>
+						<span className="mt-0.5 grid h-9 w-9 shrink-0 place-items-center rounded-lg border border-white/10 text-cyan transition-colors group-hover:border-cyan/50 group-hover:bg-cyan/10">
+							{f.icon}
+						</span>
+						<div>
+							<h3 className="text-[15px] font-semibold">{f.title}</h3>
+							<p className="mt-1 text-[13.5px] leading-relaxed text-muted">
+								{f.body}
+							</p>
+						</div>
+					</div>
 				))}
 			</div>
 		</section>
