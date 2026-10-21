@@ -21,7 +21,6 @@ export type OsId =
 	| "unknown";
 
 export interface BrowserInfo {
-	/** false for the server-rendered default, true once the real browser is known. */
 	detected: boolean;
 	id: BrowserId;
 	name: string;
@@ -118,7 +117,7 @@ export function resolve(id: BrowserId, os: OsId): BrowserInfo {
 			warn: true,
 			extensionsUrl: null,
 			ctaLabel: "See install options",
-			ctaHref: "#install",
+			ctaHref: "/#install",
 			ctaNote: "Not available on Safari or iOS",
 			recommendation: `AniKehai can't run on ${id === "safari" ? "Safari" : "iOS"}. Open this page in Firefox or a Chromium browser on a computer, or use Firefox / Kiwi on Android.`,
 		};
@@ -131,7 +130,7 @@ export function resolve(id: BrowserId, os: OsId): BrowserInfo {
 			warn: true,
 			extensionsUrl: null,
 			ctaLabel: "Get it for Android",
-			ctaHref: "#install",
+			ctaHref: "/#install",
 			ctaNote: "Kiwi, Lemur or Firefox · see the guide",
 			recommendation: `${NAMES[id]} on Android can't run extensions. Use Kiwi Browser (sideload the ZIP) or switch to Firefox for Android.`,
 		};
@@ -156,16 +155,12 @@ export function detectBrowser(): BrowserInfo {
 	return resolve(detectBrowserId(ua), detectOs(ua));
 }
 
-/**
- * What the server (and the very first client render) shows: neutral copy with no
- * browser-specific claims, so pre-rendered HTML and hydration always match.
- */
 export const DEFAULT_INFO: BrowserInfo = {
 	...resolve("other", "unknown"),
 	detected: false,
 	warn: false,
 	ctaLabel: "Install AniKehai",
-	ctaHref: "#install",
+	ctaHref: "/#install",
 	ctaNote: "Free · Firefox, Chrome & Android",
 	recommendation: "",
 };
