@@ -3,85 +3,24 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
+		<!-- Title, description, canonical, Open Graph, Twitter and JSON-LD are generated per page by scripts/prerender.mjs (src/lib/head.ts). -->
 		<title>AniKehai — Anime Discord Rich Presence Browser Extension</title>
-		<meta
-			name="description"
-			content="Show the anime you're watching on your Discord profile. AniKehai is a free, standalone Rich Presence extension for Firefox, Chrome and Android — no desktop app."
-		/>
-		<meta
-			name="keywords"
-			content="anime discord rich presence, discord anime status, anime rpc, show anime on discord, discord rpc browser extension, hianime discord, animepahe discord, miruro discord, anikehai"
-		/>
 		<meta name="author" content="Minkxx" />
 		<meta name="application-name" content="AniKehai" />
-		<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-		<link rel="canonical" href="https://anikehai.vercel.app/" />
-
 		<meta name="theme-color" content="#0b0b14" />
 		<meta name="color-scheme" content="dark" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 		<link rel="manifest" href="/manifest.webmanifest" />
 
-		<meta property="og:type" content="website" />
-		<meta property="og:site_name" content="AniKehai" />
-		<meta property="og:locale" content="en_US" />
-		<meta property="og:url" content="https://anikehai.vercel.app/" />
-		<meta property="og:title" content="AniKehai — Show your anime on Discord" />
-		<meta
-			property="og:description"
-			content="A free, standalone browser extension that turns the anime you're watching into a live Discord Rich Presence. Firefox, Chrome and Android."
-		/>
-		<meta property="og:image" content="https://anikehai.vercel.app/og-image.png" />
-		<meta property="og:image:type" content="image/png" />
-		<meta property="og:image:width" content="1200" />
-		<meta property="og:image:height" content="630" />
-		<meta property="og:image:alt" content="AniKehai showing an anime episode as a Discord Rich Presence card" />
-
-		<meta name="twitter:card" content="summary_large_image" />
-		<meta name="twitter:title" content="AniKehai — Show your anime on Discord" />
-		<meta
-			name="twitter:description"
-			content="Free standalone Rich Presence extension for anime. Firefox, Chrome and Android."
-		/>
-		<meta name="twitter:image" content="https://anikehai.vercel.app/og-image.png" />
-		<meta name="twitter:image:alt" content="AniKehai showing an anime episode as a Discord Rich Presence card" />
-
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link rel="preconnect" href="https://s4.anilist.co" crossorigin />
 		<link rel="dns-prefetch" href="https://www.google.com" />
 		<link rel="dns-prefetch" href="https://github.com" />
 
-		<!-- Fonts load without blocking first paint. The JP font is subset to the 2 glyphs we use. -->
-		<link
-			rel="preload"
-			as="style"
-			href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Inter:wght@400;500;600&display=swap"
-			onload="this.onload=null;this.rel='stylesheet'"
-		/>
-		<link
-			rel="preload"
-			as="style"
-			href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@900&text=%E6%B0%97%E9%85%8D&display=swap"
-			onload="this.onload=null;this.rel='stylesheet'"
-		/>
-		<noscript>
-			<link
-				rel="stylesheet"
-				href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Inter:wght@400;500;600&family=Noto+Serif+JP:wght@900&display=swap"
-			/>
-			<!-- Without JS the entrance animations never run, so show the content as-is. -->
-			<style>
-				*,
-				*::before,
-				*::after {
-					opacity: 1 !important;
-					transform: none !important;
-				}
-			</style>
-		</noscript>
+		<link rel="preload" href="/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
+		<link rel="preload" href="/fonts/bricolage-grotesque-latin-opsz-normal.woff2" as="font" type="font/woff2" crossorigin />
 
 		<!--prerender-head-->
 	</head>
