@@ -61,10 +61,10 @@ export function InstallPage() {
 			</Section>
 
 			<section>
-				<h2 className="font-display text-2xl font-extrabold tracking-tight">
+				<h2 className="font-display text-2xl font-semibold tracking-tight">
 					{guide.label} install steps
 				</h2>
-				<div className="mt-5 rounded-2xl border border-white/5 bg-panel/60 p-6">
+				<div className="mt-5 rounded-2xl border border-line bg-panel p-6 sm:p-8">
 					<GuideSteps
 						steps={guide.steps}
 						copyOverride={p === "chrome" ? extensionsUrl : null}
@@ -75,7 +75,7 @@ export function InstallPage() {
 					{p === "android" && (
 						<SmartLink
 							href={LINKS.kiwi}
-							className="rounded-lg border border-white/10 px-4 py-2.5 text-[14px] font-medium transition-colors hover:bg-white/5"
+							className="rounded-full border border-mauve px-5 py-2.5 text-[14px] font-medium text-ink transition-colors hover:bg-wine"
 						>
 							Kiwi Browser release
 						</SmartLink>

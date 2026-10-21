@@ -18,34 +18,33 @@ export function Compare() {
 				<div className="overflow-x-auto">
 					<table className="w-full min-w-136 border-collapse text-left text-[14px]">
 						<thead>
-							<tr className="border-b border-white/10 text-ink">
+							<tr className="border-b border-mauve text-ink">
 								<th className="py-2 pr-4 font-semibold" scope="col">
 									&nbsp;
 								</th>
-								<th className="py-2 pr-4 font-semibold" scope="col">
+								<th className="bg-wine px-4 py-3 font-semibold" scope="col">
 									AniKehai
 								</th>
-								<th className="py-2 font-semibold" scope="col">
-									Desktop-app based tools
+								<th className="px-4 py-3 font-semibold" scope="col">
+									Premid
 								</th>
 							</tr>
 						</thead>
 						<tbody>
 							{ROWS.map(([k, a, b]) => (
-								<tr key={k} className="border-b border-white/5">
-									<th className="py-2.5 pr-4 font-medium text-ink" scope="row">
+								<tr key={k} className="border-b border-line">
+									<th className="py-3 pr-4 font-medium text-ink" scope="row">
 										{k}
 									</th>
-									<td className="py-2.5 pr-4">{a}</td>
-									<td className="py-2.5">{b}</td>
+									<td className="bg-wine px-4 py-3 text-ink">{a}</td>
+									<td className="px-4 py-3">{b}</td>
 								</tr>
 							))}
 						</tbody>
 					</table>
 				</div>
 				<p className="text-[13px]">
-					The right-hand column describes the general approach of desktop-app
-					based tools such as PreMiD; check their own documentation for current
+					The right-hand column describes similar tools such as PreMiD; check their own documentation for current
 					details. AniKehai is not affiliated with PreMiD.
 				</p>
 			</Section>

@@ -1,3 +1,4 @@
+import { Closing } from "../components/sections/Closing";
 import { Faq } from "../components/sections/Faq";
 import { Features } from "../components/sections/Features";
 import { Hero } from "../components/sections/Hero";
@@ -14,6 +15,7 @@ export function Home() {
 			<Install />
 			<Sites />
 			<Faq />
+			<Closing />
 		</>
 	);
 }
