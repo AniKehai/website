@@ -1,13 +1,24 @@
 import { StrictMode } from "react";
 import { renderToString } from "react-dom/server";
+import { StaticRouter } from "react-router";
 import App from "./App.tsx";
 
-export { FAQ, LINKS, SITES, VERSION } from "./config/data.ts";
+export { NOT_FOUND, PAGES } from "./config/pages.ts";
+export { SITE_URL } from "./config/site.ts";
+export {
+	headHtml,
+	llmsFullTxt,
+	llmsTxt,
+	robotsTxt,
+	sitemapXml,
+} from "./lib/prerender.ts";
 
-export function render(): string {
+export function render(path: string): string {
 	return renderToString(
 		<StrictMode>
-			<App />
+			<StaticRouter location={path}>
+				<App />
+			</StaticRouter>
 		</StrictMode>,
 	);
 }
