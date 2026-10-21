@@ -1,0 +1,24 @@
+{
+	"ci": {
+		"collect": {
+			"staticDistDir": "./dist",
+			"url": [
+				"/index.html",
+				"/install/firefox/index.html",
+				"/sites/hianime/index.html",
+				"/troubleshooting/discord-rich-presence-not-showing/index.html"
+			],
+			"numberOfRuns": 1,
+			"settings": { "chromeFlags": "--no-sandbox" }
+		},
+		"assert": {
+			"assertions": {
+				"categories:seo": ["warn", { "minScore": 0.9 }],
+				"categories:performance": ["warn", { "minScore": 0.85 }],
+				"categories:accessibility": ["warn", { "minScore": 0.9 }],
+				"categories:best-practices": ["warn", { "minScore": 0.9 }]
+			}
+		},
+		"upload": { "target": "filesystem", "outputDir": "./lhci-reports" }
+	}
+}
