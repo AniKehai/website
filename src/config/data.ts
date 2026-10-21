@@ -2,8 +2,10 @@ export const VERSION = "2.6.5";
 
 export const LINKS = {
 	firefox: "https://addons.mozilla.org/en-US/firefox/addon/anikehai/",
-	releases: "https://github.com/minkxx/AniKehai/releases/tag/v2.6.5",
+	releases: `https://github.com/minkxx/AniKehai/releases/tag/v${VERSION}`,
 	github: "https://github.com/minkxx/AniKehai",
+	allReleases: "https://github.com/minkxx/AniKehai/releases",
+	author: "https://github.com/minkxx",
 	issues: "https://github.com/minkxx/AniKehai/issues",
 	contributing:
 		"https://github.com/minkxx/AniKehai/blob/main/.github/CONTRIBUTING.md",
@@ -70,6 +72,9 @@ export const SITES: SiteMeta[] = [
 		favicon: "https://www.google.com/s2/favicons?sz=64&domain=myanimex.com",
 	},
 ];
+
+export const siteSlug = (name: string) =>
+	name.toLowerCase().replace(/[^a-z0-9]+/g, "-");
 
 export type Platform = "firefox" | "chrome" | "android";
 
@@ -153,6 +158,8 @@ export const GUIDES: Record<
 	},
 };
 
+export const PLATFORMS = Object.keys(GUIDES) as Platform[];
+
 export const FAQ = [
 	{
 		q: "Do I need a desktop app running?",
@@ -177,5 +184,17 @@ export const FAQ = [
 	{
 		q: "Why isn't it on the Chrome Web Store?",
 		a: "Not yet. Until then, Chrome installs via “Load unpacked” using the release ZIP. Firefox users get the normal store install.",
+	},
+	{
+		q: "Is AniKehai free and open source?",
+		a: "Yes. AniKehai is free to use and its source code is published on GitHub under the MIT license.",
+	},
+	{
+		q: "Which browsers and devices does AniKehai support?",
+		a: "Firefox on desktop and Android, Chromium browsers such as Chrome, Edge, Brave, Opera and Vivaldi, and Android browsers that support extensions, like Kiwi. Safari and iOS are not supported.",
+	},
+	{
+		q: "Does AniKehai work on Android?",
+		a: "Yes. Install it from Firefox Add-ons in Firefox for Android, or sideload the release ZIP in Kiwi or Lemur Browser. Chrome for Android can't run extensions.",
 	},
 ];
