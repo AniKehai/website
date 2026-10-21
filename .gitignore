@@ -27,3 +27,8 @@ dist-ssr
 project-snapshot.md 
 snapshot.ps1
 snapshot.sh
+
+lhci-reports
+.lighthouseci
+.env
+.env.local
