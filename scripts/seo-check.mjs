@@ -1,5 +1,3 @@
-// Post-build SEO sanity check. Fails the build on regressions.
-// Usage: node scripts/seo-check.mjs
 import { existsSync } from "node:fs";
 import { readdir, readFile } from "node:fs/promises";
 import { join, relative, resolve } from "node:path";
