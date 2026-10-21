@@ -16,10 +16,10 @@ function CopyChip({ text }: { text: string }) {
 					/* clipboard unavailable */
 				}
 			}}
-			className="mt-2 inline-flex items-center gap-2 rounded-lg border border-white/10 bg-void px-3 py-1.5 font-mono text-[12px] text-ink transition-colors hover:border-dusk/50 active:scale-95"
+			className="mt-3 inline-flex items-center gap-2 rounded-full border border-mauve bg-void px-3.5 py-1.5 font-mono text-[12px] text-ink transition-colors hover:bg-wine active:scale-95"
 		>
 			{text}
-			{done ? <Check size={13} className="text-cyan" /> : <Copy size={13} />}
+			{done ? <Check size={13} /> : <Copy size={13} />}
 		</button>
 	);
 }
@@ -34,16 +34,16 @@ export function GuideSteps({
 	return (
 		<ol className="flex flex-col">
 			{steps.map((s, i) => (
-				<li key={s.title} className="relative flex gap-4 pb-6 last:pb-0">
+				<li key={s.title} className="relative flex gap-4 pb-7 last:pb-0">
 					{i < steps.length - 1 && (
-						<span className="absolute left-3.75 top-8 h-[calc(100%-2rem)] w-px bg-white/10" />
+						<span className="absolute left-3.75 top-9 h-[calc(100%-2.25rem)] w-px bg-mauve/50" />
 					)}
-					<span className="relative grid h-8 w-8 shrink-0 place-items-center rounded-full border border-white/10 bg-void font-display text-[13px] font-bold text-amber">
+					<span className="relative grid h-8 w-8 shrink-0 place-items-center rounded-full border border-mauve font-display text-[14px] font-semibold text-ink">
 						{i + 1}
 					</span>
-					<div className="pt-0.5">
-						<h3 className="text-[15px] font-semibold">{s.title}</h3>
-						<p className="mt-0.5 text-[13.5px] leading-relaxed text-muted">
+					<div className="pt-1">
+						<h3 className="text-[16px] font-semibold text-ink">{s.title}</h3>
+						<p className="mt-1 text-[14.5px] leading-relaxed text-muted">
 							{s.body}
 						</p>
 						{s.copy && <CopyChip text={copyOverride ?? s.copy} />}

@@ -33,7 +33,11 @@ function Breadcrumbs({ crumbs }: { crumbs: Crumb[] }) {
 									{c.name}
 								</SmartLink>
 							)}
-							{!last && <span aria-hidden="true">/</span>}
+							{!last && (
+								<span aria-hidden="true" className="text-mauve">
+									/
+								</span>
+							)}
 						</li>
 					);
 				})}
@@ -53,15 +57,19 @@ export function PageShell({
 }) {
 	const page = usePage();
 	return (
-		<article className="mx-auto max-w-3xl px-5 pb-24 pt-10">
+		<article className="mx-auto max-w-3xl px-5 pb-28 pt-12">
 			<Breadcrumbs crumbs={page.crumbs} />
-			<h1 className="mt-6 font-display text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl">
+			<h1 className="mt-8 font-display text-4xl font-semibold leading-[1.06] tracking-tight sm:text-5xl">
 				{title}
 			</h1>
-			<p className="mt-5 text-[17px] leading-relaxed text-muted">{lead}</p>
-			<div className="mt-10 flex flex-col gap-10">{children}</div>
+			<p className="richtext mt-6 text-[18px] leading-relaxed text-muted">
+				{lead}
+			</p>
+			<div className="mt-12 flex flex-col gap-12 border-t border-line pt-12">
+				{children}
+			</div>
 			{page.kind !== "notfound" && (
-				<p className="mt-14 text-xs text-muted">
+				<p className="mt-16 text-[13px] text-muted">
 					Last updated{" "}
 					<time dateTime={page.updated}>{formatDate(page.updated)}</time>
 				</p>
@@ -79,10 +87,10 @@ export function Section({
 }) {
 	return (
 		<section>
-			<h2 className="font-display text-2xl font-extrabold tracking-tight">
+			<h2 className="font-display text-2xl font-semibold tracking-tight">
 				{title}
 			</h2>
-			<div className="mt-3 flex flex-col gap-3 text-[15px] leading-relaxed text-muted [&_a]:text-cyan [&_a:hover]:underline [&_strong]:text-ink">
+			<div className="richtext mt-4 flex flex-col gap-4 text-[16px] leading-relaxed text-muted">
 				{children}
 			</div>
 		</section>
@@ -99,7 +107,8 @@ export function ButtonLink({
 	return (
 		<SmartLink
 			href={href}
-			className="inline-flex w-fit items-center rounded-lg bg-dusk px-4 py-2.5 text-[14px] font-semibold text-white transition-colors hover:bg-dusk/85"
+			data-button=""
+			className="inline-flex w-fit items-center rounded-full bg-ink px-5 py-2.5 text-[14px] font-semibold text-void transition-colors hover:bg-ink/85 active:scale-[0.98]"
 		>
 			{children}
 		</SmartLink>
