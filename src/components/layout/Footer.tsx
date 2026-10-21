@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import {
 	GUIDES,
 	LINKS,
@@ -18,8 +19,8 @@ function Col({
 }) {
 	return (
 		<div>
-			<h2 className="text-[13px] font-semibold text-ink">{title}</h2>
-			<ul className="mt-3 flex flex-col gap-2 text-[13px] text-muted">
+			<h2 className="text-[14px] font-medium text-ink">{title}</h2>
+			<ul className="mt-4 flex flex-col gap-2.5 text-[14px] text-muted">
 				{links.map((l) => (
 					<li key={l.href}>
 						<SmartLink
@@ -37,8 +38,26 @@ function Col({
 
 export function Footer() {
 	return (
-		<footer className="border-t border-white/5">
-			<div className="mx-auto grid max-w-6xl gap-8 px-5 py-12 sm:grid-cols-2 lg:grid-cols-4">
+		<footer className="border-t border-line">
+			<div className="mx-auto grid max-w-6xl gap-10 px-5 py-14 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr_1fr]">
+				<div className="sm:col-span-2 lg:col-span-1">
+					<Link to="/" className="inline-flex items-center gap-2.5">
+						<img
+							src="/favicon.svg"
+							alt=""
+							width={28}
+							height={28}
+							className="h-7 w-7 rounded-lg"
+						/>
+						<span className="font-display text-[18px] font-semibold tracking-tight">
+							AniKehai
+						</span>
+					</Link>
+					<p className="mt-4 max-w-xs text-[14px] leading-relaxed text-muted">
+						Your current anime episode as a Discord Rich Presence. Free and open
+						source.
+					</p>
+				</div>
 				<Col
 					title="Install"
 					links={PLATFORMS.map((p) => ({
@@ -54,7 +73,7 @@ export function Footer() {
 					}))}
 				/>
 				<Col
-					title="Help & info"
+					title="Help and info"
 					links={[
 						{ label: "Rich Presence not showing?", href: TROUBLESHOOTING_PATH },
 						{ label: "Changelog", href: "/changelog" },
@@ -76,11 +95,11 @@ export function Footer() {
 					]}
 				/>
 			</div>
-			<div className="mx-auto max-w-6xl border-t border-white/5 px-5 py-6 text-center text-[12px] text-muted sm:text-left">
-				<p>© 2026 AniKehai · v{VERSION} · MIT licensed</p>
-				<p className="mt-1 text-[11px] text-muted/70">
-					Not affiliated with Discord Inc. or any listed anime site.
-				</p>
+			<div className="border-t border-line">
+				<div className="mx-auto flex max-w-6xl flex-col gap-1 px-5 py-6 text-[13px] text-muted sm:flex-row sm:items-center sm:justify-between">
+					<p>© 2026 AniKehai. Version {VERSION}, MIT licensed.</p>
+					<p>Not affiliated with Discord Inc. or any listed anime site.</p>
+				</div>
 			</div>
 		</footer>
 	);

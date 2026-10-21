@@ -13,7 +13,6 @@ const selectorFor = (t: HeadTag) => {
 		: `link[rel="${rel}"]`;
 };
 
-/** Keeps <title>, meta, canonical and JSON-LD in step with the current route. */
 function applyHead(page: PageMeta) {
 	const { title, tags, jsonLd } = headModel(page);
 	const head = document.head;
@@ -31,7 +30,7 @@ function applyHead(page: PageMeta) {
 		}
 		keep.add(el);
 	}
-	// e.g. the noindex 404 page has no canonical/hreflang: drop the previous page's.
+
 	head
 		.querySelectorAll('link[rel="canonical"], link[rel="alternate"][hreflang]')
 		.forEach((el) => {
@@ -53,15 +52,10 @@ function targetFor(hash: string): HTMLElement | null {
 			? document.getElementById(decodeURIComponent(hash.slice(1)))
 			: null;
 	} catch {
-		return null; // malformed %-escape in the URL
+		return null;
 	}
 }
 
-/**
- * Everything a full page load used to do for free:
- * head tags, scroll position (top, or the #section) and keyboard focus.
- * Renders nothing.
- */
 export function RouteEffects() {
 	const page = usePage();
 	const loc = useLocation();
@@ -78,11 +72,9 @@ export function RouteEffects() {
 
 		const target = targetFor(loc.hash);
 		if (target) {
-			// First load: the browser already jumped to the hash itself.
 			if (!initial) target.scrollIntoView();
 			return;
 		}
-		// Back/forward: let the browser restore its own scroll position.
 		if (initial || navType === "POP") return;
 		window.scrollTo({ top: 0, left: 0, behavior: "instant" });
 		document.getElementById("main")?.focus({ preventScroll: true });
