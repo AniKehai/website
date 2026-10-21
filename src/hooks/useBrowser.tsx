@@ -1,4 +1,10 @@
-import { useEffect, useState } from "react";
+import {
+	createContext,
+	type ReactNode,
+	useContext,
+	useEffect,
+	useState,
+} from "react";
 import {
 	type BrowserInfo,
 	DEFAULT_INFO,
@@ -10,10 +16,11 @@ interface BraveNavigator extends Navigator {
 	brave?: { isBrave: () => Promise<boolean> };
 }
 
-export function useBrowser(): BrowserInfo {
+const BrowserContext = createContext<BrowserInfo>(DEFAULT_INFO);
+
+export function BrowserProvider({ children }: { children: ReactNode }) {
 	const [info, setInfo] = useState<BrowserInfo>(DEFAULT_INFO);
 
-	// Detect after mount so server HTML and the first client render are identical.
 	useEffect(() => {
 		setInfo(detectBrowser());
 	}, []);
@@ -35,5 +42,9 @@ export function useBrowser(): BrowserInfo {
 		};
 	}, []);
 
-	return info;
+	return <BrowserContext value={info}>{children}</BrowserContext>;
+}
+
+export function useBrowser(): BrowserInfo {
+	return useContext(BrowserContext);
 }
