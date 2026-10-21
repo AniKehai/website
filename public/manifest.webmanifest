@@ -4,8 +4,8 @@
 	"description": "Show the anime you're watching on your Discord profile.",
 	"start_url": "/",
 	"display": "browser",
-	"background_color": "#0b0b14",
-	"theme_color": "#0b0b14",
+	"background_color": "#1b0c1a",
+	"theme_color": "#1b0c1a",
 	"icons": [
 		{
 			"src": "/favicon.svg",
