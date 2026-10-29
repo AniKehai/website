@@ -1,8 +1,8 @@
-export const VERSION = "2.6.19";
+export const VERSION = "2.6.25";
 
 export const LINKS = {
 	firefox: "https://addons.mozilla.org/en-US/firefox/addon/anikehai/",
-	releases: `https://github.com/minkxx/AniKehai/releases/tag/v${VERSION}`,
+	releases: `https://github.com/minkxx/AniKehai/releases/download/v${VERSION}/anikehai-${VERSION}-chrome.zip`,
 	github: "https://github.com/minkxx/AniKehai",
 	allReleases: "https://github.com/minkxx/AniKehai/releases",
 	author: "https://github.com/minkxx",
@@ -22,7 +22,13 @@ export interface SiteMeta {
 export const SITES: SiteMeta[] = [
 	{
 		name: "Anikoto",
-		domains: ["anikototv.to", "anikoto.cz"],
+		domains: [
+			"anikototv.to",
+			"anikoto.cz",
+			"anikoto.me",
+			"anikoto.net",
+			"anikototv.se",
+		],
 		favicon: "https://www.google.com/s2/favicons?sz=64&domain=anikototv.to",
 	},
 	{
@@ -47,19 +53,13 @@ export const SITES: SiteMeta[] = [
 	},
 	{
 		name: "ReAnime",
-		domains: ["reanime.to"],
+		domains: ["reanime.to", "reanime.cz", "reanime.wtf"],
 		favicon: "https://www.google.com/s2/favicons?sz=64&domain=reanime.to",
 	},
 	{
 		name: "Miruro",
-		domains: [
-			"www.miruro.tv",
-			"www.miruro.to",
-			"www.miruro.cx",
-			"www.miruro.bz",
-			"barelystarted.miruro.tv",
-		],
-		favicon: "https://www.google.com/s2/favicons?sz=64&domain=miruro.tv",
+		domains: ["miruro.cx", "www.miruro.cx"],
+		favicon: "https://www.google.com/s2/favicons?sz=64&domain=miruro.cx",
 	},
 	{
 		name: "KissAssAnime",
