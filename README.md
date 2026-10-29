@@ -4,7 +4,7 @@
   <p align="center">The official minimalist landing page, installation guide, and feature showcase for the AniKehai browser extension.</p>
 
   <p align="center">
-    <img src="https://img.shields.io/github/stars/minkxx/AniKehai?style=flat" alt="GitHub Stars">
+    <img src="https://img.shields.io/github/stars/AniKehai/extension?style=flat" alt="GitHub Stars">
     <img src="https://img.shields.io/badge/version-2.6.25-blue?style=flat&labelColor=808080" alt="Version">
     <img src="https://img.shields.io/badge/license-MIT-green?style=flat" alt="License">
   </p>
@@ -59,6 +59,6 @@ Make sure you have [Bun](https://bun.sh/) installed on your machine.
 
 ## License
 
-Distributed under the [MIT License](https://github.com/minkxx/AniKehai/blob/main/LICENSE).
+Distributed under the [MIT License](https://github.com/AniKehai/extension/blob/main/LICENSE).
 
 <p align="center">Made with ❤️ by Minkxx</p>
