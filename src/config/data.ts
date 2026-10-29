@@ -2,13 +2,13 @@ export const VERSION = "2.6.25";
 
 export const LINKS = {
 	firefox: "https://addons.mozilla.org/en-US/firefox/addon/anikehai/",
-	releases: `https://github.com/minkxx/AniKehai/releases/download/v${VERSION}/anikehai-${VERSION}-chrome.zip`,
-	github: "https://github.com/minkxx/AniKehai",
-	allReleases: "https://github.com/minkxx/AniKehai/releases",
+	releases: `https://github.com/AniKehai/extension/releases/download/v${VERSION}/anikehai-${VERSION}-chrome.zip`,
+	github: "https://github.com/AniKehai/extension",
+	allReleases: "https://github.com/AniKehai/extension/releases",
 	author: "https://github.com/minkxx",
-	issues: "https://github.com/minkxx/AniKehai/issues",
+	issues: "https://github.com/AniKehai/extension/issues",
 	contributing:
-		"https://github.com/minkxx/AniKehai/blob/main/.github/CONTRIBUTING.md",
+		"https://github.com/AniKehai/extension/blob/main/.github/CONTRIBUTING.md",
 	discord: "https://discord.gg/w9Q7YUrzpn",
 	kiwi: "https://github.com/kiwibrowser/src.next/releases/tag/14310011181",
 } as const;
