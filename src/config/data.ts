@@ -1,4 +1,4 @@
-export const VERSION = "2.6.25";
+export const VERSION = "2.7.0";
 
 export const LINKS = {
 	firefox: "https://addons.mozilla.org/en-US/firefox/addon/anikehai/",
@@ -70,6 +70,11 @@ export const SITES: SiteMeta[] = [
 		name: "AnimeX",
 		domains: ["www.myanimex.com", "myanimex.com"],
 		favicon: "https://www.google.com/s2/favicons?sz=64&domain=myanimex.com",
+	},
+	{
+		name: "VoirAnime",
+		domains: ["voir-anime.to"],
+		favicon: "https://www.google.com/s2/favicons?sz=64&domain=voir-anime.to",
 	},
 ];
 
