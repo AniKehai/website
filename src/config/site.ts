@@ -8,4 +8,4 @@ export const CHROME_STORE_URL: string = env.VITE_CHROME_STORE_URL || "";
 
 export const PLAUSIBLE_DOMAIN: string = env.VITE_PLAUSIBLE_DOMAIN || "";
 
-export const UPDATED = "2026-10-29";
+export const UPDATED = "2026-10-31";
