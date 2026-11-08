@@ -110,7 +110,7 @@ export const GUIDES: Record<
 	},
 	edge: {
 		label: "Edge",
-		subtitle: "Desktop — one click from the Microsoft Edge Add-ons store.",
+		subtitle: "Desktop & Android — one click, auto-updates.",
 		steps: [
 			{
 				title: "Open the Edge Add-ons page",
@@ -125,7 +125,7 @@ export const GUIDES: Record<
 	chrome: {
 		label: "Chrome",
 		subtitle:
-			"Chrome, Brave, Opera, Vivaldi — loaded unpacked until we reach the Web Store.",
+			"Chrome, Brave, Vivaldi — loaded unpacked until we reach the Web Store.",
 		steps: [
 			{
 				title: "Download the release ZIP",

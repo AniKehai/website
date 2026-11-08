@@ -110,7 +110,7 @@ export function resolve(id: BrowserId, os: OsId): BrowserInfo {
 		};
 	}
 
-	if (id === "edge" && os !== "ios" && os !== "android") {
+	if (id === "edge" && os !== "ios") {
 		return {
 			...base,
 			platform: "edge",
