@@ -52,8 +52,7 @@ const INSTALL_META: Record<
 	},
 	chrome: {
 		name: "Chrome, Brave, Opera & Vivaldi",
-		title:
-			"Install AniKehai on Chrome, Brave, Opera & Vivaldi — Discord Anime RPC",
+		title: "Install AniKehai on Chrome, Brave & Vivaldi — Discord Anime RPC",
 		description:
 			"Step-by-step guide to load the AniKehai Discord Rich Presence extension in Chrome, Brave, Opera or Vivaldi using the release ZIP.",
 	},
