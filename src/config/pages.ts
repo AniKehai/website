@@ -44,11 +44,17 @@ const INSTALL_META: Record<
 		description:
 			"Add AniKehai to Firefox (desktop or Android) in one click and show the anime you're watching on Discord. Free, no desktop app needed.",
 	},
-	chrome: {
-		name: "Chrome, Edge & Brave",
-		title: "Install AniKehai on Chrome, Edge & Brave — Discord Anime RPC",
+	edge: {
+		name: "Edge",
+		title: "Install AniKehai on Edge — Anime Discord Rich Presence",
 		description:
-			"Step-by-step guide to load the AniKehai Discord Rich Presence extension in Chrome, Edge, Brave, Opera or Vivaldi using the release ZIP.",
+			"Add AniKehai to Microsoft Edge in one click from the Edge Add-ons store and show the anime you're watching on Discord. Free, no desktop app needed.",
+	},
+	chrome: {
+		name: "Chrome, Brave, Opera & Vivaldi",
+		title: "Install AniKehai on Chrome, Brave & Vivaldi — Discord Anime RPC",
+		description:
+			"Step-by-step guide to load the AniKehai Discord Rich Presence extension in Chrome, Brave, Opera or Vivaldi using the release ZIP.",
 	},
 	android: {
 		name: "Android",

@@ -2,6 +2,7 @@ export const VERSION = "2.7.0";
 
 export const LINKS = {
 	firefox: "https://addons.mozilla.org/en-US/firefox/addon/anikehai/",
+	edge: "https://microsoftedge.microsoft.com/addons/detail/anikehai/dakljfkcpimaaolpikgogaenlikiemha",
 	releases: `https://github.com/AniKehai/extension/releases/download/v${VERSION}/anikehai-${VERSION}-chrome.zip`,
 	github: "https://github.com/AniKehai/extension",
 	allReleases: "https://github.com/AniKehai/extension/releases",
@@ -81,7 +82,7 @@ export const SITES: SiteMeta[] = [
 export const siteSlug = (name: string) =>
 	name.toLowerCase().replace(/[^a-z0-9]+/g, "-");
 
-export type Platform = "firefox" | "chrome" | "android";
+export type Platform = "firefox" | "edge" | "chrome" | "android";
 
 export interface Step {
 	title: string;
@@ -107,10 +108,24 @@ export const GUIDES: Record<
 			},
 		],
 	},
+	edge: {
+		label: "Edge",
+		subtitle: "Desktop — one click from the Microsoft Edge Add-ons store.",
+		steps: [
+			{
+				title: "Open the Edge Add-ons page",
+				body: "Head to AniKehai on the Microsoft Edge Add-ons store.",
+			},
+			{
+				title: "Click “Get”",
+				body: "Confirm the permission prompt. That's the whole install — automatic updates included.",
+			},
+		],
+	},
 	chrome: {
 		label: "Chrome",
 		subtitle:
-			"Chrome, Edge, Brave, Opera, Vivaldi — loaded unpacked until we reach the Web Store.",
+			"Chrome, Brave, Opera, Vivaldi — loaded unpacked until we reach the Web Store.",
 		steps: [
 			{
 				title: "Download the release ZIP",

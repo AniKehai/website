@@ -20,8 +20,13 @@ const REQUIREMENTS: Record<Platform, string[]> = {
 		"A Discord account to link.",
 		"Installing from Firefox Add-ons gives you automatic updates.",
 	],
+	edge: [
+		"Microsoft Edge on Windows, macOS or Linux.",
+		"A Discord account to link.",
+		"Installing from the Edge Add-ons store gives you automatic updates.",
+	],
 	chrome: [
-		"A Chromium browser on a computer: Chrome, Edge, Brave, Opera or Vivaldi.",
+		"A Chromium browser on a computer: Chrome, Brave, Opera or Vivaldi.",
 		"A Discord account to link.",
 		"Developer mode must be on to load the unpacked extension.",
 	],
@@ -35,6 +40,7 @@ const REQUIREMENTS: Record<Platform, string[]> = {
 function primaryAction(p: Platform) {
 	if (p === "firefox")
 		return { label: "Open Firefox Add-ons", href: LINKS.firefox };
+	if (p === "edge") return { label: "Open Edge Add-ons", href: LINKS.edge };
 	if (p === "chrome" && CHROME_STORE_URL)
 		return { label: "Open Chrome Web Store", href: CHROME_STORE_URL };
 	return { label: "Download release ZIP", href: LINKS.releases };
