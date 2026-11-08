@@ -21,7 +21,7 @@ const REQUIREMENTS: Record<Platform, string[]> = {
 		"Installing from Firefox Add-ons gives you automatic updates.",
 	],
 	edge: [
-		"Microsoft Edge on Windows, macOS or Linux.",
+		"Microsoft Edge on Windows, macOS, Linux or Android.",
 		"A Discord account to link.",
 		"Installing from the Edge Add-ons store gives you automatic updates.",
 	],
