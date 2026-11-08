@@ -1,10 +1,11 @@
-import { Compass, Flame, Smartphone } from "lucide-react";
+import { Compass, Flame, Globe, Smartphone } from "lucide-react";
 import { GUIDES, PLATFORMS, type Platform } from "../../config/data";
 import { useBrowser } from "../../hooks/useBrowser";
 import { SmartLink } from "../ui/SmartLink";
 
 const icons: Record<Platform, typeof Flame> = {
 	firefox: Flame,
+	edge: Globe,
 	chrome: Compass,
 	android: Smartphone,
 };
