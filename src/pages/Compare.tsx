@@ -3,7 +3,11 @@ import { ButtonLink, PageShell, Section } from "../components/ui/PageShell";
 const ROWS = [
 	["Needs a desktop app", "No", "No"],
 	["Where it runs", "Inside your browser", "Inside your browser"],
-	["Android support", "Yes (Firefox, Kiwi, Lemur)", "Generally desktop only"],
+	[
+		"Android support",
+		"Yes (Firefox, Microsoft Edge)",
+		"Generally desktop only",
+	],
 	["Focus", "Anime only", "Many websites and services"],
 	["Privacy toggle", "Yes, one click", "Varies"],
 ] as const;
