@@ -110,6 +110,20 @@ export function resolve(id: BrowserId, os: OsId): BrowserInfo {
 		};
 	}
 
+	if (id === "edge" && os !== "ios" && os !== "android") {
+		return {
+			...base,
+			platform: "edge",
+			warn: false,
+			extensionsUrl: EXT_URLS.edge ?? "edge://extensions",
+			ctaLabel: "Add to Edge",
+			ctaHref: LINKS.edge,
+			ctaNote: "Free · Microsoft Edge Add-ons",
+			recommendation:
+				"Install straight from the Microsoft Edge Add-ons store — one click, automatic updates.",
+		};
+	}
+
 	if (os === "ios" || id === "safari") {
 		return {
 			...base,
