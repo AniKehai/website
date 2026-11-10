@@ -1,4 +1,4 @@
-export const VERSION = "2.7.0";
+export const VERSION = "2.8.0";
 
 export const LINKS = {
 	firefox: "https://addons.mozilla.org/en-US/firefox/addon/anikehai/",
@@ -68,7 +68,7 @@ export const SITES: SiteMeta[] = [
 		favicon: "https://www.google.com/s2/favicons?sz=64&domain=kaa.lt",
 	},
 	{
-		name: "AnimeX",
+		name: "MyAnimeX",
 		domains: ["www.myanimex.com", "myanimex.com"],
 		favicon: "https://www.google.com/s2/favicons?sz=64&domain=myanimex.com",
 	},
@@ -76,6 +76,21 @@ export const SITES: SiteMeta[] = [
 		name: "VoirAnime",
 		domains: ["voir-anime.to"],
 		favicon: "https://www.google.com/s2/favicons?sz=64&domain=voir-anime.to",
+	},
+	{
+		name: "AniGum",
+		domains: ["anigum.com", "anirose.site"],
+		favicon: "https://www.google.com/s2/favicons?sz=64&domain=anigum.com",
+	},
+	{
+		name: "bAnime",
+		domains: ["banime.top"],
+		favicon: "https://www.google.com/s2/favicons?sz=64&domain=banime.top",
+	},
+	{
+		name: "AnimeX",
+		domains: ["animex.one"],
+		favicon: "https://www.google.com/s2/favicons?sz=64&domain=animex.one",
 	},
 ];
 
