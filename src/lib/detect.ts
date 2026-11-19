@@ -157,7 +157,7 @@ export function resolve(id: BrowserId, os: OsId): BrowserInfo {
 		extensionsUrl: EXT_URLS[id] ?? "chrome://extensions",
 		ctaLabel:
 			id === "other" ? "Download for Chromium" : `Download for ${NAMES[id]}`,
-		ctaHref: LINKS.releases,
+		ctaHref: LINKS.chrome,
 		ctaNote: "Free · load unpacked, takes a minute",
 		recommendation: `${NAMES[id]} uses the Chromium build: download the ZIP, extract it and load it unpacked. We'll walk you through it.`,
 	};

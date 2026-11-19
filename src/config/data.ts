@@ -1,8 +1,9 @@
-export const VERSION = "2.8.0";
+export const VERSION = "2.9.1";
 
 export const LINKS = {
 	firefox: "https://addons.mozilla.org/en-US/firefox/addon/anikehai/",
 	edge: "https://microsoftedge.microsoft.com/addons/detail/anikehai/dakljfkcpimaaolpikgogaenlikiemha",
+	chrome: "/install/chrome",
 	releases: `https://github.com/AniKehai/extension/releases/download/v${VERSION}/anikehai-${VERSION}-chrome.zip`,
 	github: "https://github.com/AniKehai/extension",
 	allReleases: "https://github.com/AniKehai/extension/releases",
@@ -44,8 +45,8 @@ export const SITES: SiteMeta[] = [
 	},
 	{
 		name: "HiAnime",
-		domains: ["hianime.at"],
-		favicon: "https://www.google.com/s2/favicons?sz=64&domain=hianime.at",
+		domains: ["hianime.fm"],
+		favicon: "https://www.google.com/s2/favicons?sz=64&domain=hianime.fm",
 	},
 	{
 		name: "Aniwatch",
@@ -74,8 +75,8 @@ export const SITES: SiteMeta[] = [
 	},
 	{
 		name: "VoirAnime",
-		domains: ["voir-anime.to"],
-		favicon: "https://www.google.com/s2/favicons?sz=64&domain=voir-anime.to",
+		domains: ["voiranime.cx"],
+		favicon: "https://www.google.com/s2/favicons?sz=64&domain=voiranime.cx",
 	},
 	{
 		name: "AniGum",
